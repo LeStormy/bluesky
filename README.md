@@ -5,7 +5,9 @@ publicly available here:
 `GET https://bluesky.stormycat.xyz/im_alive` => to check if it's alive
 
 `POST https://bluesky.stormycat.xyz/create` => to create a post on BlueSky
+
 Content-Type: 'application/json'
+
 JSON body params: 
 ```
 "pds_url": defaults to "https://bsky.social",
