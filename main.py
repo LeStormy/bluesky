@@ -353,15 +353,19 @@ def create_post(args):
     print("createRecord response:", file=sys.stderr)
     print(json.dumps(resp.json(), indent=2))
     resp.raise_for_status()
+    return resp.json()
 
 @app.route('/im_alive')
 def im_alive():
-    return "I'm alive!"
+    print(123)
+    return "I'm alive!", 200
 
 
-@app.route("/create_post", methods=['POST'])
-def main():
+@app.route("/create", methods=['POST'])
+def create():
+    print(123)
     data = request.get_json()
+    print (data)
     
     args = {
         'pds_url': data.get('pds_url') or "https://bsky.social",
@@ -382,7 +386,8 @@ def main():
     if args.get('image') and len(args.get('image')) > 4:
         return "at most 4 images per post", 400
         
-    create_post(args)
+    return create_post(args), 200
+
 
 # pds-url
 # handle
