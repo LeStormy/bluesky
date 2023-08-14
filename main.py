@@ -384,15 +384,3 @@ def create():
         return "at most 4 images per post", 400
         
     return create_post(args), 200
-
-
-# pds-url
-# handle
-# password
-# text
-# image
-# alt-text
-# lang
-# reply-to
-# embed-url
-# embed-ref
