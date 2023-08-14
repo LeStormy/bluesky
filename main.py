@@ -10,14 +10,11 @@ To run this Python script, you need the 'requests' and 'bs4' (BeautifulSoup) pac
 """
 
 import re
-import os
 import sys
 import json
-import argparse
 from typing import Dict, List
 from datetime import datetime, timezone
 from flask import Flask, request
-from types import SimpleNamespace
 
 import requests
 from bs4 import BeautifulSoup
