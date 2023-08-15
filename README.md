@@ -1,6 +1,8 @@
 a very clumsy python API to create posts on bluesky (literally my first python project, and the posting logic is from bsky example tutorial)
 
-publicly available here: 
+publicly available at `https://bluesky.stormycat.xyz`, or you can pull this and deploy your own if you want.
+
+### Usage
 
 `GET https://bluesky.stormycat.xyz/im_alive` => to check if it's alive
 
