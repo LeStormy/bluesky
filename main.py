@@ -360,9 +360,7 @@ def im_alive():
 
 @app.route("/create", methods=['POST'])
 def create():
-    print(123)
     data = request.get_json()
-    print (data)
     
     args = {
         'pds_url': data.get('pds_url') or "https://bsky.social",
@@ -377,7 +375,6 @@ def create():
         'embed_ref': data.get('embed_ref')
     }
 
-    print (args)
     if not (args.get('handle') and args.get('password')):
         return "both handle and password are required", 400
     if args.get('image') and len(args.get('image')) > 4:
